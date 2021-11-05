@@ -11,16 +11,12 @@
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="RouteTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="Route" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wWS-P6-x7h">
-                                <rect key="frame" x="0.0" y="90" width="414" height="772"/>
-                                <gestureRecognizers/>
-                            </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qd-eY-cPl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPg-fO-Puw">
                                 <rect key="frame" x="177" y="54" width="60" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -28,26 +24,29 @@
                                 <color key="shadowColor" systemColor="systemGray3Color"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nyR-xq-g0Y">
+                                <rect key="frame" x="0.0" y="85" width="414" height="777"/>
+                            </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="wWS-P6-x7h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="71c-qT-dDK"/>
-                            <constraint firstItem="9qd-eY-cPl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NC0-Ax-QwO"/>
-                            <constraint firstItem="wWS-P6-x7h" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OuJ-Hq-4AX"/>
-                            <constraint firstItem="9qd-eY-cPl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="S4S-dP-IDf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wWS-P6-x7h" secondAttribute="bottom" id="gca-Zb-m1D"/>
-                            <constraint firstItem="wWS-P6-x7h" firstAttribute="top" secondItem="9qd-eY-cPl" secondAttribute="bottom" constant="5" id="mDB-2U-bFt"/>
+                            <constraint firstItem="qPg-fO-Puw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="1ER-Ej-tpg"/>
+                            <constraint firstItem="qPg-fO-Puw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HYC-eV-2OS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nyR-xq-g0Y" secondAttribute="trailing" id="VGg-xo-Khj"/>
+                            <constraint firstItem="nyR-xq-g0Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jww-22-gCm"/>
+                            <constraint firstItem="nyR-xq-g0Y" firstAttribute="top" secondItem="qPg-fO-Puw" secondAttribute="bottom" id="rYs-zn-Rfa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nyR-xq-g0Y" secondAttribute="bottom" id="vek-Z6-KQg"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="distanceLabel" destination="9qd-eY-cPl" id="qdp-8H-btN"/>
-                        <outlet property="mapView" destination="wWS-P6-x7h" id="yBs-sL-Il3"/>
+                        <outlet property="distanceLabel" destination="qPg-fO-Puw" id="Sk9-Y4-fwS"/>
+                        <outlet property="mapView" destination="nyR-xq-g0Y" id="cUD-PQ-2dJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
+            <point key="canvasLocation" x="30" y="84"/>
         </scene>
     </scenes>
     <resources>
